@@ -1,0 +1,24 @@
+a = int(input("a degerini girin : "))
+b = int(input("b degerini girin : "))
+c = int(input("c degerini girin : "))
+
+print(f"Denklem : {a}x² + {b}x + {c}")
+
+delta = float(pow(b,2)) -4*a*c
+
+
+print (f"Delta = {delta}")
+
+
+
+if delta < 0:
+    print("Reel kok yok")
+else:
+    x1 = (-b + float(pow(delta , 1/2)))/ 2*a
+    x2 = (-b - float(pow(delta , 1/2)))/ 2*a
+    print("Reel kok var")
+    if delta == 0:
+        print(f"Cift kat kok \n{x1}")
+    elif delta > 0:
+        print(f"2 reel kok var \nx1 = {x1}\nx2 = {x2}")
+
