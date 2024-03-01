@@ -1,0 +1,47 @@
+def faktor(sayi):
+    cevap = True 
+
+    while cevap == True:
+        ilkdeneme = 1
+        ikincideneme = 1
+        dogalmi = 1
+
+        sayi = input("Faktöriyelini istediğiniz sayıyı girin\n")
+        try:
+            sayi = int(sayi)
+        except ValueError or TypeError:
+            print("Adam akıllı sayı gir.")
+            ilkdeneme = 0
+            ikincideneme = 0
+
+        if ilkdeneme == 1:
+
+            if sayi < 0:
+                print("Doğal sayı gir.")
+                dogalmi = 0
+
+            elif sayi == 0:
+                sonuc = 1
+                print(f"Cevap : {sonuc}")
+
+            else:
+                sonuc = 1
+                for i in range(1, sayi + 1):
+                    sonuc = sonuc * i
+                print(f"Cevap : {sonuc}")
+
+        cevap = input("Bidaha ?\nhe/yok\n")
+
+        if cevap == "he" or  cevap == "He" or cevap == "HE" or cevap == "he ":
+           cevap = True
+
+        elif cevap == "yok" or cevap == "Yok" or cevap == "YOK" or cevap == "yok ":
+                cevap = False
+        else:
+            if ikincideneme == 0:
+                print("Bak ikidir bana ters gidiyosun adam ol")
+            else:
+                print("Yok sana faktoriyel falan")
+
+sayi = 0
+faktor(sayi)
