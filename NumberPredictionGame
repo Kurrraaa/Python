@@ -1,0 +1,15 @@
+import random
+secret = random.randint(1, 10)
+guess = int(input("Guess a number between 1 and 10: "))
+for i in range(3):
+  if guess < secret:
+    print("Too low!")
+  elif guess > secret:
+    print("Too high!")
+  elif guess == secret:
+    print("You won!, Congratulations! ")
+    break
+  if i == 2 :
+      print(f"You lost!, It was {secret}")
+      break
+  guess = int(input("Try again: "))
